@@ -8,17 +8,19 @@
 # when computing the middle of array, can be fatal
 # also forgetting to check for searched value when 'start == end' is
 # another common error
+# PS: never forget or ignore your data structures, do so @ ur own peril
+# when dealing with strings and integers just knw the rules are never the same
 
 
 def main():
-    sorted_array = input().strip().split(",")  # comma separated array expected
+    sorted_array = list(map(int, input().strip().split(",")))  # comma separated array expected
 
-    if sorted_array == "-1":  # if end of input is reached
+    if sorted_array == -1:  # if end of input is reached
         return
 
-    item = input()  # this is the item that will be searched for
+    item = int(input())  # this is the item that will be searched for
 
-    binary_search(sorted_array, item)  # searched for the item
+    print(binary_search(sorted_array, item))  # searched for the item
 
 
 def binary_search(sorted_array, item):
@@ -26,12 +28,11 @@ def binary_search(sorted_array, item):
 
     start = 0  # start of array
     end = len_array - 1  # end of array
-    mid = int(len_array / 2)  # middle of array
+    mid = int((start + end) / 2)  # middle of array
 
-    while start != end:  # if we haven't converged
+    while start <= end:  # if we haven't converged
         if sorted_array[mid] == item:  # item has been found at the mid of array
-            print("{} found at {}".format(item, mid))
-            return
+            return mid
 
         if item > sorted_array[mid]:  # discarding the lower part of array
             start = mid + 1
@@ -41,12 +42,8 @@ def binary_search(sorted_array, item):
             end = mid - 1
             mid = int((start + end) / 2)
 
-    if sorted_array[start] == item:  # we could have as well check with end, both are equal, True when we converge
-        print("{} found at {}".format(item, start))
-        return
-
-    else:   # item doesn't exist in array, GTFO, lol
-        print("-1")
+    # item doesn't exist in array, GTFO, lol
+    return -1
 
 
 if __name__ == "__main__":

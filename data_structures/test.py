@@ -8,11 +8,22 @@ from linked_list import LinkedList, Node
 
 
 def main():
-    arrays = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    arrays = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 1]
     linked_list1 = LinkedList()
+    a = Node(15)
+    b = Node(16)
+    c = Node(17)
 
-    linked_list1.array_to_linked_list(arrays)
+    a.next = b
+    b.next = c
+    c.next = a
+    linked_list1.add_node(a)
+    linked_list1.add_node(b)
+    linked_list1.add_node(c)
+    print(linked_list1.has_loop())
 
+    # linked_list1.array_to_linked_list(arrays)
+    # print(linked_list1.has_loop())
     linked_list1.print_list()
 
 

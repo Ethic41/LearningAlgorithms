@@ -3,3 +3,6 @@
 .idea*
 *.iml
 __pycache__*
+
+# ignore my rough folder
+.rough

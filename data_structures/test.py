@@ -4,27 +4,26 @@
 # the various data structures found in this module
 
 
-from linked_list import LinkedList, Node
+from bidirectional_graph import BiGraph
 
 
 def main():
-    arrays = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 1]
-    linked_list1 = LinkedList()
-    a = Node(15)
-    b = Node(16)
-    c = Node(17)
+    graph1 = BiGraph(5)
+    graph2 = BiGraph(3)
+    graph1.add_edge((0, 1))
+    graph1.add_edge((0, 4))
+    graph1.add_edge((1, 2))
+    graph1.add_edge((1, 3))
+    graph1.add_edge((1, 4))
+    graph1.add_edge((2, 3))
+    graph1.add_edge((3, 4))
 
-    a.next = b
-    b.next = c
-    c.next = a
-    linked_list1.add_node(a)
-    linked_list1.add_node(b)
-    linked_list1.add_node(c)
-    print(linked_list1.has_loop())
+    graph2.add_edge((0, 1))
+    graph2.add_edge((1, 2))
+    graph2.add_edge((2, 0))
 
-    # linked_list1.array_to_linked_list(arrays)
-    # print(linked_list1.has_loop())
-    linked_list1.print_list()
+    graph1.print_graph()
+    graph2.print_graph()
 
 
 if __name__ == "__main__":

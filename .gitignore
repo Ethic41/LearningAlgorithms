@@ -4,5 +4,5 @@
 *.iml
 __pycache__*
 
-# ignore my rough folder
-.rough
+# ignore content of my rough folder
+.rough*

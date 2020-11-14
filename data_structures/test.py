@@ -4,26 +4,21 @@
 # the various data structures found in this module
 
 
-from bidirectional_graph import BiGraph
+from binary_search_tree import BinarySearchTree
+from node import Node
+from random import choice
 
 
 def main():
-    graph1 = BiGraph(5)
-    graph2 = BiGraph(3)
-    graph1.add_edge((0, 1))
-    graph1.add_edge((0, 4))
-    graph1.add_edge((1, 2))
-    graph1.add_edge((1, 3))
-    graph1.add_edge((1, 4))
-    graph1.add_edge((2, 3))
-    graph1.add_edge((3, 4))
+    tree = BinarySearchTree()
+    for i in range(1, 128):
+        i = choice(list(range(1, 3000)))
+        print("{} ".format(i), end="")
+        tree.add_node(Node(i))
 
-    graph2.add_edge((0, 1))
-    graph2.add_edge((1, 2))
-    graph2.add_edge((2, 0))
+    print()
 
-    graph1.print_graph()
-    graph2.print_graph()
+    tree.print_tree()
 
 
 if __name__ == "__main__":

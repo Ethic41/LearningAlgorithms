@@ -7,7 +7,7 @@
 # that is for a given node u, u.left.x < u.x
 # and u.right.x > u.x
 from collections import deque
-from tree import Tree
+from tree import Tree # type: ignore
 
 
 class BinarySearchTree(Tree):

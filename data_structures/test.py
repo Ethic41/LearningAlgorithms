@@ -4,8 +4,8 @@
 # the various data structures found in this module
 
 
-from binary_search_tree import BinarySearchTree
-from node import Node
+from binary_search_tree import BinarySearchTree # type: ignore
+from node import Node # type: ignore
 from random import choice
 
 

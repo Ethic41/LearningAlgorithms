@@ -7,7 +7,7 @@
 # binary tree, note that due to it's varying
 # nature, this is not the only possible implementation
 from collections import deque
-from tree import Tree
+from tree import Tree # type: ignore
 
 
 class BinaryTree(Tree):

@@ -12,7 +12,7 @@
 # PS: this implementation assumes array is infinite or
 # unbounded
 
-from binary_search_mine import binary_search
+from binary_search_mine import binary_search # type: ignore
 
 
 def main():

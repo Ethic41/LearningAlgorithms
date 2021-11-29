@@ -7,7 +7,7 @@
 # it could get dirty
 
 from math import sqrt
-from linear_search_mine import linear_search
+from linear_search_mine import linear_search # type: ignore
 
 
 def main():

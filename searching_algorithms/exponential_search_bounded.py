@@ -11,7 +11,7 @@
 # for bounded array as well
 # PS: this implementation is for bounded or finite array
 
-from binary_search_mine import binary_search
+from binary_search_mine import binary_search # type: ignore
 
 
 def main():

@@ -1,3 +1,3 @@
 # Learning Algorithms and Data structures
 
-## **Algorithmic Lessons from the site geeksforgeeks.com**
+## **Algorithms and Data structures problems solutions from different challenge sites**

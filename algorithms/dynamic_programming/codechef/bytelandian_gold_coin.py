@@ -3,7 +3,7 @@
 # -*- coding: utf-8 -*-
 # @Date    : 2022-05-29 09:19:57
 # @Author  : Dahir Muhammad Dahir (dahirmuhammad3@gmail.com)
-# @Link    : link
+# @Link    : https://www.codechef.com/submit-v2/COINS
 # @Version : 1.0.0
 
 

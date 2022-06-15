@@ -6,7 +6,7 @@
 # @Description : something cool
 
 from typing import List, Optional
-from node import Node
+from node import Node # type: ignore
 
 
 def pre_order_recursive(root: Optional[Node]):
